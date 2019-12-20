@@ -53,6 +53,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      /*
       dark: true,
       themes: {
         dark: {
@@ -65,6 +66,7 @@ export default {
           success: colors.green.accent3
         }
       }
+      */
     }
   },
   /*
