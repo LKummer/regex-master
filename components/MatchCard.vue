@@ -17,31 +17,25 @@
         hide-details
         class="pt-0"
       />
-      <p
-        v-if="!regex"
-        class="mt-3 mb-0 text-center headline"
+      <v-alert
+        v-if="error"
+        type="info"
+        dense
+        class="mt-4 mb-0"
       >
-        Input a regular expression at the top card.
-      </p>
-      <p
-        v-else-if="!value"
-        class="mt-3 mb-0 text-center headline"
-      >
-        Input a value.
-      </p>
-      <p
-        v-else-if="!matches"
-        class="mt-3 mb-0 text-center headline"
-      >
-        No matches found.
-      </p>
-      <p
-        v-for="(match, index) in matches"
-        :key="index"
-        class="mt-3 mb-0 text-center headline"
-      >
-        {{ match }}
-      </p>
+        {{ error }}
+      </v-alert>
+      <div v-else>
+        <v-chip
+          v-for="(match, index) in matches"
+          :key="index"
+          label
+          color="primary"
+          class="mt-4 mb-0 mr-4 text-center headline"
+        >
+          {{ match }}
+        </v-chip>
+      </div>
     </v-card-text>
   </v-card>
 </template>
@@ -69,8 +63,18 @@ export default {
     },
     matches: {
       get () {
-        return this.value.match(new RegExp(this.regex))
+        return this.value.match(new RegExp(this.regex, 'g'))
       }
+    },
+    error () {
+      if (!this.regex) {
+        return 'Input a regular expression at the top card.'
+      } else if (!this.value) {
+        return 'Input a string for matching.'
+      } else if (!this.matches) {
+        return 'No matches found.'
+      }
+      return ''
     }
   }
 }
