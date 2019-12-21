@@ -30,18 +30,21 @@
       >
         Open a match card by pressing the button.
       </p>
-    </v-fade-transition>
-    <div class="text-center">
-      <v-btn
-        @click="create_card"
-        fab
-        color="primary"
+      <div
+        key="-2"
+        class="text-center"
       >
-        <v-icon>
-          mdi-plus
-        </v-icon>
-      </v-btn>
-    </div>
+        <v-btn
+          @click="create_card"
+          fab
+          color="primary"
+        >
+          <v-icon>
+            mdi-plus
+          </v-icon>
+        </v-btn>
+      </div>
+    </v-fade-transition>
   </div>
 </template>
 
