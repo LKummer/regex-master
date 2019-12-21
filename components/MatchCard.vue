@@ -19,11 +19,12 @@
       />
       <v-alert
         v-if="error"
-        type="info"
+        :type="error.type"
+        :outlined="error.outlined"
         dense
         class="mt-4 mb-0"
       >
-        {{ error }}
+        {{ error.message }}
       </v-alert>
       <div v-else>
         <v-chip
@@ -74,13 +75,26 @@ export default {
     },
     error () {
       if (!this.regex) {
-        return 'Input a regular expression at the top card.'
+        return {
+          message: 'Input a regular expression at the top card.',
+          type: 'info'
+        }
       } else if (!this.regex_or_undefined) {
-        return 'The regular expression is invalid.'
+        return {
+          message: 'The regular expression is invalid.',
+          type: 'error'
+        }
       } else if (!this.value) {
-        return 'Input a string for matching.'
+        return {
+          message: 'Input a string for matching.',
+          type: 'info'
+        }
       } else if (!this.matches) {
-        return 'No matches found.'
+        return {
+          message: 'No matches found.',
+          type: 'info',
+          outlined: true
+        }
       }
       return ''
     }
