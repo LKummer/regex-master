@@ -1,7 +1,10 @@
 <template>
   <v-app>
     <v-content>
-      <v-toolbar>
+      <v-toolbar
+        dark
+        color="primary"
+      >
         <v-toolbar-title>Regex Master</v-toolbar-title>
         <v-spacer />
         <v-toolbar-items>
@@ -15,11 +18,6 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer
-      app
-    >
-      <span>&copy; 2019</span>
-    </v-footer>
   </v-app>
 </template>
 
