@@ -61,14 +61,22 @@ export default {
         this.$emit('input', v)
       }
     },
-    matches: {
-      get () {
-        return this.value.match(new RegExp(this.regex, 'g'))
+    regex_or_undefined () {
+      // Returns undefined when the regex string is invalid.
+      try {
+        return RegExp(this.regex, 'g')
+      } catch {
+        return undefined
       }
+    },
+    matches () {
+      return this.value.match(this.regex_or_undefined)
     },
     error () {
       if (!this.regex) {
         return 'Input a regular expression at the top card.'
+      } else if (!this.regex_or_undefined) {
+        return 'The regular expression is invalid.'
       } else if (!this.value) {
         return 'Input a string for matching.'
       } else if (!this.matches) {
