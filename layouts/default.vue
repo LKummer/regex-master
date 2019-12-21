@@ -5,16 +5,34 @@
         dark
         color="primary"
       >
-        <v-toolbar-title>Regex Master</v-toolbar-title>
+        <v-toolbar-title
+          class="mr-4"
+        >
+          Regex Master
+        </v-toolbar-title>
+        <v-toolbar-items>
+          <v-btn
+            to="/"
+            text
+          >
+            Home
+          </v-btn>
+        </v-toolbar-items>
         <v-spacer />
         <v-toolbar-items>
+          <v-btn
+            to="/about"
+            text
+          >
+            About
+          </v-btn>
           <v-btn text>
             Star on Github!
             <v-icon>mdi-github-circle</v-icon>
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
