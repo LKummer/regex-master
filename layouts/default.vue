@@ -33,7 +33,9 @@
         </v-toolbar-items>
       </v-toolbar>
       <v-container fluid>
-        <nuxt />
+        <v-fade-transition>
+          <nuxt />
+        </v-fade-transition>
       </v-container>
     </v-content>
   </v-app>
