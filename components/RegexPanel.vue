@@ -8,8 +8,7 @@
           prefix="/"
           suffix="/g"
         />
-        The regular expression in the box is matched against the strings at the
-        bottom card.
+        The regular expression is matched against the bottom cards.
       </v-card-text>
     </v-card>
     <match-card
