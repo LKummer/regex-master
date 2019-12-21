@@ -4,13 +4,7 @@
     justify-center
     align-center
   >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <regex-panel />
-    </v-flex>
+    <regex-panel />
   </v-layout>
 </template>
 
