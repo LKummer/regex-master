@@ -11,20 +11,26 @@
         The regular expression is matched against the bottom cards.
       </v-card-text>
     </v-card>
-    <match-card
-      v-for="(input, index) in match_inputs"
-      :key="index"
-      :regex="regex"
-      @close="delete_card(index)"
-      v-model="input.string"
-      class="mb-3"
-    />
-    <p
-      v-if="match_inputs.length === 0"
-      class="mt-0 mb-3 text-center headline"
+    <v-fade-transition
+      group
+      hide-on-leave
     >
-      Open a match card by pressing the button.
-    </p>
+      <match-card
+        v-for="(input, index) in match_inputs"
+        :key="index"
+        :regex="regex"
+        @close="delete_card(index)"
+        v-model="input.string"
+        class="mb-3"
+      />
+      <p
+        key="-1"
+        v-if="match_inputs.length === 0"
+        class="mt-0 mb-3 text-center headline"
+      >
+        Open a match card by pressing the button.
+      </p>
+    </v-fade-transition>
     <div class="text-center">
       <v-btn
         @click="create_card"
