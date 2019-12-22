@@ -45,8 +45,13 @@
 export default {
   props: {
     regex: {
-      type: String,
-      default: ''
+      type: Object,
+      default () {
+        return {
+          string: '',
+          flags: ''
+        }
+      }
     },
     value: {
       type: String,
@@ -65,7 +70,7 @@ export default {
     regex_or_undefined () {
       // Returns undefined when the regex string is invalid.
       try {
-        return RegExp(this.regex, 'g')
+        return RegExp(this.regex.string, this.regex.flags)
       } catch {
         return undefined
       }
@@ -74,7 +79,7 @@ export default {
       return this.value.match(this.regex_or_undefined)
     },
     error () {
-      if (!this.regex) {
+      if (!this.regex.string) {
         return {
           message: 'Input a regular expression at the top card.',
           type: 'info'

@@ -1,16 +1,9 @@
 <template>
   <div>
-    <v-card class="mb-3">
-      <v-card-text>
-        Input any JS regular expression.
-        <v-text-field
-          v-model="regex"
-          prefix="/"
-          suffix="/g"
-        />
-        The regular expression is matched against the bottom cards.
-      </v-card-text>
-    </v-card>
+    <regex-card
+      v-model="regex"
+      class="mb-3"
+    />
     <v-fade-transition
       group
       hide-on-leave
@@ -50,17 +43,23 @@
 
 <script>
 import MatchCard from '~/components/MatchCard'
+import RegexCard from '~/components/RegexCard'
 
 export default {
   components: {
-    MatchCard
+    MatchCard,
+    RegexCard
   },
   data () {
     return {
-      regex: '',
+      regex: {
+        string: '\\.(png|jpe?g)$',
+        flags: 'g'
+      },
       match_inputs: [
-        { string: 'input_a' },
-        { string: 'input_b' },
+        { string: 'hello_world.png' },
+        { string: 'hello_world.jpeg' },
+        { string: 'hello_world.jpg' },
         { string: '' }
       ]
     }
