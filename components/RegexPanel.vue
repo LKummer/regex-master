@@ -21,7 +21,7 @@
         v-if="match_inputs.length === 0"
         class="mt-0 mb-3 text-center headline"
       >
-        Open a match card by pressing the button.
+        Open a match card using the button.
       </p>
       <div
         key="-2"
