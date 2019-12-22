@@ -60,7 +60,7 @@ export default {
   data () {
     return {
       flags: [
-        { label: 'Global', flag: 'g', enabled: false },
+        { label: 'Global', flag: 'g', enabled: true },
         { label: 'Case Insensitive', flag: 'i', enabled: false },
         { label: 'Multi Line', flag: 'm', enabled: false }
       ],
@@ -106,7 +106,8 @@ export default {
           return cur.enabled ? acc + cur.flag : acc
         }, '')
       },
-      deep: true
+      deep: true,
+      immediate: true
     }
   }
 }
