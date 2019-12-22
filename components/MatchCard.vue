@@ -11,8 +11,10 @@
       </v-btn>
     </v-card-actions>
     <v-card-text class="pt-0">
-      <v-text-field
+      <v-textarea
         v-model="input_value"
+        rows="1"
+        auto-grow
         condensed
         hide-details
         class="pt-0"
