@@ -41,7 +41,7 @@
           Check out the source code!
           <v-chip
             link
-            href="https://github.com/LKummer/"
+            href="https://github.com/LKummer/regex-master"
           >
             <v-icon left>
               mdi-github-circle

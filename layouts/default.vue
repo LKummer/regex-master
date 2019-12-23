@@ -99,7 +99,7 @@ export default {
       ],
       source: {
         title: 'Star on Github!',
-        to: 'https://github.com/LKummer/',
+        to: 'https://github.com/LKummer/regex-master',
         icon: 'mdi-github-circle'
       }
     }
