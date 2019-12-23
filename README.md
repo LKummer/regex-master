@@ -1,4 +1,6 @@
-<img src="readme-assets/title.png" width="65%" align="center">
+<div align="center">
+  <img src="readme-assets/title.png" width="65%" align="center">
+</div>
 <p align="center">
   <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Lint?label=lint">
   <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Deploy?label=deploy">
