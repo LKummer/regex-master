@@ -10,7 +10,7 @@
 
 Regular expression checking web app that matches against multiple strings. [Hosted on Github Pages](https://lkummer.github.io/regex-master/).
 
-<img src="readme-assets/full-shot.png" width="100%" align="center">
+<img src="readme-assets/full-shot.png" width="100%">
 
 
 
