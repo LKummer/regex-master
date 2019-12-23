@@ -1,14 +1,16 @@
-<div align="center">
-  <h1 style="font-size: 500%; border-bottom: none; margin-bottom: .5rem">
-    Regex Master
-  </h1>
+<img src="readme-assets/title.png" width="65%" align="center">
+<p align="center">
   <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Lint?label=lint">
   <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Deploy?label=deploy">
   <img src="https://img.shields.io/david/lkummer/regex-master">
   <img src="https://img.shields.io/github/license/lkummer/regex-master">
-</div>
+</p>
 
 Regular expression checking web app that matches against multiple strings. [Hosted on Github Pages](https://lkummer.github.io/regex-master/).
+
+<img src="readme-assets/full-shot.png" width="100%" align="center">
+
+
 
 ## Development Setup
 
