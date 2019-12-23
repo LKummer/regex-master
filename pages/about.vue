@@ -75,3 +75,20 @@
     </v-card>
   </v-layout>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'About',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'About the Regex Master application.'
+        }
+      ]
+    }
+  }
+}
+</script>
