@@ -37,6 +37,18 @@
           </v-chip>
           . It is free and open source with no advertisements or trackers.
         </p>
+        <p class="mt-4 text-center">
+          Check out the source code!
+          <v-chip
+            link
+            href="https://github.com/LKummer/"
+          >
+            <v-icon left>
+              mdi-github-circle
+            </v-icon>
+            regex-master
+          </v-chip>
+        </p>
         <v-divider />
         <p class="mt-4 text-center">
           Check out my Github!
@@ -47,7 +59,7 @@
             <v-icon left>
               mdi-github-circle
             </v-icon>
-            Lior Kummer
+            LKummer
           </v-chip>
         </p>
         <p class="mb-0 text-center">

@@ -9,7 +9,7 @@
         :suffix="'/' + regex_flags_string"
         prefix="/"
       />
-      The regular expression is matched against the bottom cards.
+      The inputs in the lower cards are matched against the regular expression.
     </v-card-text>
     <v-card-actions
       class="pt-0"
