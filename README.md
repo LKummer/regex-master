@@ -1,22 +1,44 @@
-# regex-master
+<div align="center">
+  <h1 style="font-size: 500%; border-bottom: none; margin-bottom: .5rem">
+    Regex Master
+  </h1>
+  <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Lint?label=lint">
+  <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Deploy?label=deploy">
+  <img src="https://img.shields.io/david/lkummer/regex-master">
+  <img src="https://img.shields.io/github/license/lkummer/regex-master">
+</div>
 
-> Multi-input regex checker.
+Regular expression checking web app that matches against multiple strings. [Hosted on Github Pages](https://lkummer.github.io/regex-master/).
 
-## Build Setup
+## Development Setup
+
+To install dependencies and run the development server:
 
 ``` bash
 # install dependencies
-$ npm run install
+$ npm ci
 
-# serve with hot reload at localhost:3000
+# serve with hot reload
 $ npm run dev
+```
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+To generate a static website from the application:
 
+``` bash
 # generate static project
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## License
+
+This project is licensed under the GNU General Public License 3.0.
+
+### Dependencies
+
+Thanks to the developers of all the dependencies that helped make this project.
+
+* [Nuxt](https://nuxtjs.org/) - GPL V3.0.
+* [Vuetify](https://vuetifyjs.com/en/) - MIT.
+* [Webpack](https://webpack.js.org/) - MIT.
+* [ESLint](https://eslint.org/) - MIT.
+* [Stylelint](https://stylelint.io/) - MIT.
