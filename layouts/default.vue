@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      app
       v-model="drawer"
+      app
       disable-resize-watcher
     >
       <v-list>
