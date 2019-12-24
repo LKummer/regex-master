@@ -10,6 +10,14 @@
         prefix="/"
       />
       The inputs in the lower cards are matched against the regular expression.
+      <v-alert
+        v-if="error"
+        :type="error.type"
+        dense
+        class="mt-4 mb-0"
+      >
+        {{ error.message }}
+      </v-alert>
     </v-card-text>
     <v-card-actions
       class="pt-0"
@@ -68,6 +76,24 @@ export default {
     }
   },
   computed: {
+    error () {
+      if (!this.regex_string) {
+        return {
+          message: 'Input a regular expression.',
+          type: 'info'
+        }
+      }
+      // Check if the regex is valid by trying to construct one.
+      try {
+        RegExp(this.regex_string, this.regex_flags_string)
+      } catch {
+        return {
+          message: 'Input a valid regular expression.',
+          type: 'error'
+        }
+      }
+      return ''
+    },
     regex_value: {
       get () {
         return this.value
