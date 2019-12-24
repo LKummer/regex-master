@@ -71,5 +71,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    base: 'https://lkummer.github.io/regex-master'
   }
 }
