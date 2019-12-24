@@ -43,7 +43,7 @@ Employs server side rendering for statically generating the application, enablin
 
 ## Light Weight
 
-Just a tad over 500 kB for the first load and under 20 kB for page switches when gzipped.
+Under 650 kB for first page load and under 10 kB for page switch when gzipped.
 
 # Development Setup
 

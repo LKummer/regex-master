@@ -60,7 +60,8 @@ export default {
           error: colors.deepOrange.darken1
         }
       }
-    }
+    },
+    treeShake: false
   },
   /*
   ** Build configuration
