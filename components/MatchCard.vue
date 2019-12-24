@@ -81,22 +81,12 @@ export default {
       return this.value.match(this.regex_or_undefined)
     },
     error () {
-      if (!this.regex.string) {
-        return {
-          message: 'Input a regular expression at the top card.',
-          type: 'info'
-        }
-      } else if (!this.regex_or_undefined) {
-        return {
-          message: 'The regular expression is invalid.',
-          type: 'error'
-        }
-      } else if (!this.value) {
+      if (!this.value) {
         return {
           message: 'Input a string for matching.',
           type: 'info'
         }
-      } else if (!this.matches) {
+      } else if ((!this.matches) || (!this.regex_or_undefined) || (!this.regex.string)) {
         return {
           message: 'No matches found.',
           type: 'info',
