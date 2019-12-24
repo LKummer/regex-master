@@ -16,30 +16,67 @@ Regular expression checking web app that matches against multiple strings. [Host
   <img src="readme-assets/full-shot.png" width="100%">
 </a>
 
-## Development Setup
+# Contents
 
-To install dependencies and run the development server:
+* [Prominent Features](#prominent-features)
+* [Development Setup](#development-setup)
+* [License](#license)
+
+# Prominent Features
+
+## Multi String Matching
+
+An editable card list for string inputs makes testing a regular expression against multiple different inputs quick and easy.
+
+## Multi Line Input
+
+Match cards allow multiple lines of input and the `m` flag can be enabled, allowing testing of regular expressions against multiple lines of input.
+
+## Mobile First Design
+
+Uses hamburger navigation for smaller screen sizes and designed for a good user experience on mobile.
+
+## Statically Generated
+
+Employs server side rendering for statically generating the application, enabling quick loading and making hosting practically free.
+
+## Light Weight
+
+Just a tad over 500 kB for the first load and under 20 kB for page switches when gzipped.
+
+# Development Setup
+
+To install dependencies:
 
 ``` bash
-# install dependencies
 $ npm ci
+```
 
-# serve with hot reload
+To run a development server with hot reload:
+
+``` bash
 $ npm run dev
 ```
 
-To generate a static website from the application:
+To run the linters:
 
 ``` bash
-# generate static project
+$ npm run lint
+```
+
+To generate a static website:
+
+``` bash
 $ npm run generate
 ```
 
-## License
+The project uses Github Actions to generate itself and deploy to Github Pages.
+
+# License
 
 This project is licensed under the GNU General Public License 3.0.
 
-### Dependencies
+## Dependencies
 
 Thanks to the developers of all the dependencies that helped make this project.
 
