@@ -73,6 +73,6 @@ export default {
     }
   },
   router: {
-    base: 'https://lkummer.github.io/regex-master'
+    base: '/regex-master/'
   }
 }
