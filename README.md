@@ -4,8 +4,9 @@
   </a>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Lint?label=lint">
+  <img src="https://img.shields.io/website.svg?url=https%3A%2F%2Flkummer.github.io%2Fregex-master">
   <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Deploy?label=deploy">
+  <img src="https://img.shields.io/github/workflow/status/lkummer/regex-master/Lint?label=lint">
   <img src="https://img.shields.io/david/lkummer/regex-master">
   <img src="https://img.shields.io/github/license/lkummer/regex-master">
 </p>
