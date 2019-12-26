@@ -29,9 +29,13 @@ Regular expression checking web app that matches against multiple strings. [Host
 
 An editable card list for string inputs makes testing a regular expression against multiple different inputs quick and easy.
 
-## Multi Line Input
+## Multi Line Matching
 
 Match cards allow multiple lines of input and the `m` flag can be enabled, allowing testing of regular expressions against multiple lines of input.
+
+## Persistent State
+
+Persistent session state implemented using the Web Storage API. Private by design, never sending any data.
 
 ## Mobile First Design
 
