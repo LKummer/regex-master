@@ -56,7 +56,9 @@ export default {
         string: '',
         flags: 'g'
       },
-      match_inputs: []
+      match_inputs: [],
+      // Used to key the version of storage data.
+      data_key: 'regex-master-data-v1'
     }
   },
   watch: {
@@ -74,11 +76,18 @@ export default {
     }
   },
   mounted () {
-    if (window.sessionStorage.regex) {
-      this.regex = JSON.parse(window.sessionStorage.regex)
-    }
-    if (window.sessionStorage.match_inputs) {
-      this.match_inputs = JSON.parse(window.sessionStorage.match_inputs)
+    // Check if the data version is correct.
+    if (window.sessionStorage.data_key === this.data_key) {
+      if (window.sessionStorage.regex) {
+        this.regex = JSON.parse(window.sessionStorage.regex)
+      }
+      if (window.sessionStorage.match_inputs) {
+        this.match_inputs = JSON.parse(window.sessionStorage.match_inputs)
+      }
+    } else {
+      // If the data format is a different version, erase it.
+      window.sessionStorage.clear()
+      window.sessionStorage.data_key = this.data_key
     }
   },
   methods: {
