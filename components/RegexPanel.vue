@@ -53,15 +53,32 @@ export default {
   data () {
     return {
       regex: {
-        string: '\\.(png|jpe?g)$',
+        string: '',
         flags: 'g'
       },
-      match_inputs: [
-        { string: 'hello_world.png', key: '8528d031' },
-        { string: 'hello_world.jpeg', key: '430849c7' },
-        { string: 'hello_world.jpg', key: '5aaf5ebc' },
-        { string: '', key: '62aace96' }
-      ]
+      match_inputs: []
+    }
+  },
+  watch: {
+    regex: {
+      handler (value) {
+        window.sessionStorage.regex = JSON.stringify(value)
+      },
+      deep: true
+    },
+    match_inputs: {
+      handler (value) {
+        window.sessionStorage.match_inputs = JSON.stringify(value)
+      },
+      deep: true
+    }
+  },
+  mounted () {
+    if (window.sessionStorage.regex) {
+      this.regex = JSON.parse(window.sessionStorage.regex)
+    }
+    if (window.sessionStorage.match_inputs) {
+      this.match_inputs = JSON.parse(window.sessionStorage.match_inputs)
     }
   },
   methods: {
