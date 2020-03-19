@@ -25,12 +25,13 @@
       </p>
       <div
         key="create"
-        class="text-center"
+        class="text-center mb-12 mb-sm-0"
       >
         <v-btn
           @click="create_card"
           fab
-          color="primary"
+          class="d-none d-sm-inline"
+          color="accent"
         >
           <v-icon>
             mdi-plus
@@ -38,8 +39,28 @@
         </v-btn>
       </div>
     </v-slide-y-reverse-transition>
+    <v-btn
+      @click="create_card"
+      fab
+      fixed
+      bottom
+      right
+      large
+      class="high-z d-flex d-sm-none"
+      color="accent"
+    >
+      <v-icon>
+        mdi-plus
+      </v-icon>
+    </v-btn>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.high-z {
+  z-index: 100;
+}
+</style>
 
 <script>
 import MatchCard from '~/components/MatchCard'

@@ -6,6 +6,21 @@
       disable-resize-watcher
     >
       <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title
+              class="title"
+            >
+              Regex Master
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              Multi matching regex utility.
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider
+          class="mb-4"
+        />
         <v-list-item
           v-for="(item, index) of items"
           :key="index"
@@ -32,25 +47,14 @@
       <v-toolbar
         dark
         color="primary"
+        class="d-none d-sm-block"
       >
-        <v-btn
-          @click="drawer = !drawer"
-          text
-          icon
-          class="d-flex d-sm-none"
-        >
-          <v-icon>
-            mdi-menu
-          </v-icon>
-        </v-btn>
         <v-toolbar-title
           class="mr-4"
         >
           Regex Master
         </v-toolbar-title>
-        <v-toolbar-items
-          class="d-none d-sm-flex"
-        >
+        <v-toolbar-items>
           <v-btn
             v-for="(item, index) of items"
             :key="index"
@@ -61,9 +65,7 @@
           </v-btn>
         </v-toolbar-items>
         <v-spacer />
-        <v-toolbar-items
-          class="d-none d-sm-flex"
-        >
+        <v-toolbar-items>
           <v-btn
             :href="source.to"
             text
@@ -73,6 +75,25 @@
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
+
+      <v-toolbar
+        bottom
+        width="100%"
+        class="fixed d-flex d-sm-none"
+        color="primary"
+        dark
+      >
+        <v-btn
+          @click="drawer = !drawer"
+          text
+          icon
+        >
+          <v-icon>
+            mdi-menu
+          </v-icon>
+        </v-btn>
+      </v-toolbar>
+
       <v-container fluid>
         <v-fade-transition>
           <nuxt />
@@ -81,6 +102,13 @@
     </v-content>
   </v-app>
 </template>
+
+<style lang="scss" scoped>
+.fixed {
+  position: fixed;
+  z-index: 10;
+}
+</style>
 
 <script>
 export default {
