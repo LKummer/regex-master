@@ -8,6 +8,9 @@
         v-model="regex_string"
         :suffix="'/' + regex_flags_string"
         prefix="/"
+        filled
+        hide-details
+        class="my-4"
       />
       The inputs in the lower cards are matched against the regular expression.
       <v-alert

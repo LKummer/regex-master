@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-actions class="pb-0">
+    <v-card-actions>
       <v-spacer />
       <v-btn
         @click="$emit('close')"
@@ -17,7 +17,7 @@
         auto-grow
         condensed
         hide-details
-        class="pt-0"
+        filled
       />
       <v-alert
         v-if="error"
