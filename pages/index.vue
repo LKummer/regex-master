@@ -1,8 +1,6 @@
 <template>
   <v-layout
-    column
     justify-center
-    align-center
   >
     <regex-panel />
   </v-layout>

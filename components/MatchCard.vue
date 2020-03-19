@@ -28,13 +28,16 @@
       >
         {{ error.message }}
       </v-alert>
-      <div v-else>
+      <div
+        v-else
+        class="mr-n4"
+      >
         <v-chip
           v-for="(match, index) in matches"
           :key="index"
           label
           color="primary"
-          class="mt-4 mb-0 mr-4 text-center headline"
+          class="mt-4 mb-0 mr-4 headline"
         >
           {{ match }}
         </v-chip>
