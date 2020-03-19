@@ -87,6 +87,7 @@
           @click="drawer = !drawer"
           text
           rounded
+          large
         >
           <v-icon>
             mdi-menu
