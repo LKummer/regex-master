@@ -86,11 +86,12 @@
         <v-btn
           @click="drawer = !drawer"
           text
-          icon
+          rounded
         >
           <v-icon>
             mdi-menu
           </v-icon>
+          Menu
         </v-btn>
       </v-toolbar>
 
