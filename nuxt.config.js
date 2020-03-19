@@ -56,6 +56,7 @@ export default {
       themes: {
         light: {
           primary: '#0f4c81',
+          accent: '#fe7d00',
           info: '#1569b2',
           error: colors.deepOrange.darken1
         }
