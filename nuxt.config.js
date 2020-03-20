@@ -93,6 +93,8 @@ export default {
   */
   pwa: {
     manifest: {
+      name: 'Regex Master',
+      short_name: 'Regex Master',
       description: 'Multi regular expression matching utility.',
       start_url: '/regex-master/',
       scope: '/regex-master/',
