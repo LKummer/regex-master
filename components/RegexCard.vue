@@ -8,6 +8,7 @@
         v-model="regex_string"
         :suffix="'/' + regex_flags_string"
         prefix="/"
+        label="Regular Expression"
         filled
         hide-details
         class="my-4"

@@ -13,6 +13,7 @@
     <v-card-text class="pt-0">
       <v-textarea
         v-model="input_value"
+        label="String to Match"
         rows="1"
         auto-grow
         condensed
