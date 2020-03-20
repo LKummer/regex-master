@@ -12,15 +12,15 @@
         hide-details
         class="my-4"
       />
-      The inputs in the lower cards are matched against the regular expression.
       <v-alert
         v-if="error"
         :type="error.type"
         dense
-        class="mt-4 mb-0"
+        class="my-4"
       >
         {{ error.message }}
       </v-alert>
+      The inputs in the lower cards are matched against the regular expression.
     </v-card-text>
     <v-card-actions
       class="pt-0"
