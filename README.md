@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://lkummer.github.io/regex-master/">
-    <img src="readme-assets/title.png" width="65%" align="center">
+    <img src="resources/readme/title.png" width="65%" align="center">
   </a>
 </p>
 <p align="center">
@@ -14,7 +14,7 @@
 Regular expression checking web app that matches against multiple strings. [Hosted on Github Pages](https://lkummer.github.io/regex-master/).
 
 <a href="https://lkummer.github.io/regex-master/">
-  <img src="readme-assets/full-shot.png" width="100%">
+  <img src="resources/readme/full-shot.png" width="100%">
 </a>
 
 # Contents
