@@ -37,10 +37,6 @@ export default {
         type: 'image/x-icon',
         sizes: '512x512',
         href: '/regex-master/resources/icon-512.png'
-      },
-      {
-        rel: 'manifest',
-        href: '/regex-master/manifest.webmanifest'
       }
     ]
   },
@@ -72,6 +68,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/pwa'
   ],
   /*
   ** vuetify module configuration
@@ -90,6 +87,41 @@ export default {
       }
     },
     treeShake: false
+  },
+  /*
+  ** Nuxt PWA configuration
+  */
+  pwa: {
+    manifest: {
+      description: 'Multi regular expression matching utility.',
+      start_url: '/regex-master/',
+      scope: '/regex-master/',
+      display: 'standalone',
+      background_color: '#fafafa',
+      theme_color: '#0f4c81',
+      icons: [
+        {
+          src: '/regex-master/resources/icon-48.png',
+          sizes: '48x48',
+          type: 'image/png'
+        },
+        {
+          src: '/regex-master/resources/icon-96.png',
+          sizes: '96x96',
+          type: 'image/png'
+        },
+        {
+          src: '/regex-master/resources/icon-192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/regex-master/resources/icon-512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    }
   },
   /*
   ** Build configuration
