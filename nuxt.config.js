@@ -40,7 +40,7 @@ export default {
       },
       {
         rel: 'manifest',
-        href="/regex-master/manifest.webmanifest"
+        href: '/regex-master/manifest.webmanifest'
       }
     ]
   },
