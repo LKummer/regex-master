@@ -14,7 +14,30 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        sizes: '48x48',
+        href: '/regex-master/resources/icon-48.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        sizes: '96x96',
+        href: '/regex-master/resources/icon-96.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        sizes: '192x192',
+        href: '/regex-master/resources/icon-192.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        sizes: '512x512',
+        href: '/regex-master/resources/icon-512.png'
+      }
     ]
   },
   /*
