@@ -37,6 +37,10 @@ export default {
         type: 'image/x-icon',
         sizes: '512x512',
         href: '/regex-master/resources/icon-512.png'
+      },
+      {
+        rel: 'manifest',
+        href="/regex-master/manifest.webmanifest"
       }
     ]
   },
